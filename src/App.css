@@ -1,38 +1,184 @@
-.App {
+
+/* Global */
+
+*,
+::after,
+::before {
+  margin: 5px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+h2 {
+  font-size: 35px;
+}
+h4{
+  font-size: 19px;
+}
+p {
+  line-height: 25px;
+  font-size: 17px;
+  font-weight: 300;
+  transition: 1s;
+}
+@media screen and (max-width: 992px){
+h2 {
+    font-size: 27px;
+  }
+h4{
+    font-size: 15px;
+  }
+p {
+    line-height: 19px;
+    font-size: 13px;
+    font-weight: 300;
+    transition: 1s;
+  }
+}
+
+
+
+
+
+/*  */
+
+.mainGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-areas: 
+                      ". middleTour ."
+                      ". middleTour ."
+                      ". middleTour ."
+                      ". middleTour .";
+}
+
+.middleTour {
+  display: grid;
+  grid-area: middleTour;
   text-align: center;
+  background-color: powderblue;
+  border: 2px solid seashell;
+  box-shadow: 0 5px 15px black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tourPic {
+  border: 1px solid grey;
+  border-radius: 4px;
+  max-width: 450px;
+  max-height: 350px;
+  box-shadow: 0 5px 15px black;
+  transition: 1s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.tourPic:hover {
+  max-width: 480px;
+  max-height: 365px;
+  box-shadow: 0 7px 35px black;
+  border: 1px solid seashell;
+}
+
+.btn {
+  background-color: lightskyblue;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px black;
+  border: 1px solid black;
+  transition: 1s;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color:seashell;
+  box-shadow: 0 2px 5px black;
+  border-radius: 3px;
+  font-size: 11.5px;
+  font-weight: bold;
+  
+}
+
+.re-btn {
+  background-color: lightskyblue;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px black;
+  border: 1px solid black;
+  transition: 1s;
+  font-size: 10px;
+  width: 50px;
+  max-height: 17px;
+  cursor: pointer;
+  
+}
+
+.re-btn:hover {
+  background-color:seashell;
+  box-shadow: 0 2px 5px black;
+  border-radius: 3px;
+  font-size: 10.5px;
+  font-weight: bold;
+}
+
+.underline {
+  width: 100px;
+  height: 1px;
+  background: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .tourPic {
+    border: 1px solid grey;
+    border-radius: 4px;
+    max-width: 250px;
+    max-height: 150px;
+    box-shadow: 0 5px 15px black;
+    transition: 1s;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .tourPic:hover {
+    max-width: 270px;
+    max-height: 160px;
+    box-shadow: 0 7px 35px black;
+    border: 1px solid seashell;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .btn {
+    background-color: lightskyblue;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px black;
+    border: 1px solid black;
+    transition: 1s;
+    font-size: 10px;
+    cursor: pointer;
   }
+  
+  .btn:hover {
+    background-color:seashell;
+    box-shadow: 0 2px 5px black;
+    border-radius: 3px;
+    font-size: 11.5px;
+    font-weight: bold;
+
+  }
+  
+  .re-btn {
+    background-color: lightskyblue;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px black;
+    border: 1px solid black;
+    transition: 1s;
+    font-size: 10px;
+    width: 50px;
+    max-height: 17px;
+    cursor: pointer;
+  }
+  
+  .re-btn:hover {
+    background-color:seashell;
+    box-shadow: 0 2px 5px black;
+    border-radius: 3px;
+    font-size: 10.5px;
+    font-weight: bold;
+  }
+  
 }
